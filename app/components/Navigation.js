@@ -1,0 +1,108 @@
+'use client';
+
+import { useEffect, useMemo, useState } from 'react';
+
+const NAV_SECTIONS = ['music', 'photography'];
+const OBSERVE_SECTIONS = ['home', ...NAV_SECTIONS];
+
+export default function Navigation() {
+  const [isOpen, setIsOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState('music');
+
+  useEffect(() => {
+    const root = document.getElementById('scroll-container');
+    if (!root) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const targetId = entry.target.id === 'home' ? 'music' : entry.target.id;
+            setActiveSection(targetId);
+          }
+        });
+      },
+      {
+        root,
+        threshold: 0.6,
+      }
+    );
+
+    OBSERVE_SECTIONS.forEach((id) => {
+      const sectionEl = document.getElementById(id);
+      if (sectionEl) observer.observe(sectionEl);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
+  const linkClasses = useMemo(() => {
+    const shared = 'transition-all tracking-[0.25em]';
+    return {
+      base: shared,
+      active: 'text-white text-base',
+      inactive: 'text-gray-500 text-sm hover:text-gray-300',
+    };
+  }, []);
+
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', inline: 'start', block: 'nearest' });
+      setIsOpen(false);
+    }
+  };
+
+  return (
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-sm">
+      <div className="w-full px-6 py-4 flex justify-end items-center md:pr-16 lg:pr-28">
+        {/* Desktop Navigation */}
+        <div className="hidden md:flex gap-8">
+          {NAV_SECTIONS.map((section) => (
+            <button
+              key={section}
+              onClick={() => scrollToSection(section)}
+              className={`${linkClasses.base} ${
+                activeSection === section ? linkClasses.active : linkClasses.inactive
+              }`}
+            >
+              {section.toUpperCase()}
+            </button>
+          ))}
+        </div>
+
+        {/* Mobile Menu Button */}
+        <button
+          onClick={() => setIsOpen(!isOpen)}
+          className="md:hidden text-white p-2"
+          aria-label="Toggle menu"
+        >
+          <div className="w-6 h-5 flex flex-col justify-between">
+            <span className={`block h-0.5 w-full bg-white transition-all ${isOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
+            <span className={`block h-0.5 w-full bg-white transition-all ${isOpen ? 'opacity-0' : ''}`}></span>
+            <span className={`block h-0.5 w-full bg-white transition-all ${isOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
+          </div>
+        </button>
+      </div>
+
+      {/* Mobile Menu */}
+      {isOpen && (
+        <div className="md:hidden bg-black border-t border-white/10">
+          <div className="flex flex-col gap-4 px-6 py-6">
+            {NAV_SECTIONS.map((section) => (
+              <button
+                key={section}
+                onClick={() => scrollToSection(section)}
+                className={`text-left transition-all tracking-[0.2em] ${
+                  activeSection === section ? 'text-white text-base' : 'text-gray-500 text-sm hover:text-gray-300'
+                }`}
+              >
+                {section.toUpperCase()}
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
+    </nav>
+  );
+}
