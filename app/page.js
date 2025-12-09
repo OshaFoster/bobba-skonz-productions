@@ -39,11 +39,11 @@ export default function Home() {
           </div>
 
           {/* Title - Bottom on mobile, Right on desktop (30%) */}
-          <div className="w-full md:w-[30vw] h-1/3 md:h-full flex flex-col justify-center bg-black px-6 lg:px-8 flex-shrink-0">
+          <div className="w-full md:w-[30vw] h-1/3 md:h-full flex flex-col justify-center bg-black px-6 py-4 lg:px-8 flex-shrink-0">
             <div>
               <h1 className="font-light tracking-wider text-white leading-tight">
-                <span className="text-4xl md:text-5xl lg:text-6xl block" style={{ fontFamily: "'Barrio', sans-serif" }}>BOBBA SKONZ</span>
-                <span className="text-xl md:text-2xl lg:text-3xl block mt-2">PRODUCTIONS</span>
+                <span className="text-3xl md:text-5xl lg:text-6xl block" style={{ fontFamily: "'Barrio', sans-serif" }}>BOBBA SKONZ</span>
+                <span className="text-lg md:text-2xl lg:text-3xl block mt-1 md:mt-2">PRODUCTIONS</span>
               </h1>
             </div>
           </div>
@@ -53,11 +53,11 @@ export default function Home() {
         <section id="music" className="w-screen h-screen md:snap-start bg-black pt-16 pb-12 md:pt-0 md:pb-0">
           <div className="flex h-full flex-col md:flex-row">
             {/* Music Video - Top on mobile, Left on desktop (70%) */}
-            <div className="w-full md:basis-[70%] md:max-w-[70%] h-2/3 md:h-full flex items-center justify-center bg-zinc-900 p-8 md:p-12">
+            <div className="w-full md:basis-[70%] md:max-w-[70%] h-2/3 md:h-full flex items-center justify-center bg-zinc-900 p-4 md:p-12">
               <video
                 src="/video/WARPZ PROMO DONE (2).mp4"
                 controls
-                className="max-w-full h-auto max-h-[75vh] object-contain"
+                className="max-w-full h-auto max-h-[40vh] md:max-h-[75vh] object-contain"
                 preload="metadata"
               >
                 Your browser does not support the video tag.
@@ -65,18 +65,18 @@ export default function Home() {
             </div>
 
             {/* Song Info - Bottom on mobile, Right on desktop (30%) */}
-            <div className="w-full md:basis-[30%] md:max-w-[30%] h-1/3 md:h-full flex flex-col justify-center bg-black border-t border-white/10 md:border-t-0 md:border-l md:border-white/10 px-8 py-10 space-y-8">
-              <div className="space-y-6">
+            <div className="w-full md:basis-[30%] md:max-w-[30%] h-1/3 md:h-full flex flex-col justify-center bg-black border-t border-white/10 md:border-t-0 md:border-l md:border-white/10 px-6 py-4 md:px-8 md:py-10 space-y-3 md:space-y-8">
+              <div className="space-y-3 md:space-y-6">
                 <div>
-                  <h2 className="text-4xl md:text-5xl font-light tracking-wider text-white mb-2" style={{ fontFamily: "'Barrio', sans-serif" }}>
+                  <h2 className="text-3xl md:text-5xl font-light tracking-wider text-white mb-1 md:mb-2" style={{ fontFamily: "'Barrio', sans-serif" }}>
                     WARPZ
                   </h2>
-                  <p className="text-sm text-gray-400 tracking-wide">
+                  <p className="text-xs md:text-sm text-gray-400 tracking-wide">
                     SINGLE
                   </p>
                 </div>
 
-                <div className="space-y-4 text-sm text-gray-300 leading-relaxed">
+                <div className="space-y-2 md:space-y-4 text-xs md:text-sm text-gray-300 leading-relaxed hidden md:block">
                   <p>
                     A sonic journey through layered beats and atmospheric textures. WARPZ pushes boundaries with its hypnotic rhythms and bold production.
                   </p>
@@ -85,11 +85,11 @@ export default function Home() {
                   </p>
                 </div>
 
-                <div className="pt-4 border-t border-white/10">
-                  <p className="text-xs text-gray-400 uppercase tracking-wider mb-2">
+                <div className="pt-2 md:pt-4 border-t border-white/10">
+                  <p className="text-xs text-gray-400 uppercase tracking-wider mb-1 md:mb-2">
                     Release Date
                   </p>
-                  <p className="text-sm text-white">
+                  <p className="text-xs md:text-sm text-white">
                     Coming Soon
                   </p>
                 </div>
@@ -112,7 +112,7 @@ export default function Home() {
             </div>
 
             {/* Gallery Info - After all images */}
-            <div className="w-full flex flex-col justify-center items-center bg-black border-t border-white/10 px-8 py-10 space-y-6">
+            <div className="w-full flex flex-col justify-center items-center bg-black border-t border-white/10 px-8 pt-10 pb-24 space-y-6">
               <div className="w-full max-w-sm overflow-hidden">
                 <img
                   src="/images/about.webp"
