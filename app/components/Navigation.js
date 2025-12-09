@@ -4,6 +4,11 @@ import { useEffect, useMemo, useState } from 'react';
 
 const NAV_SECTIONS = ['home', 'music', 'photography'];
 const OBSERVE_SECTIONS = [...NAV_SECTIONS];
+const NAV_LABELS = {
+  home: 'HOME',
+  music: 'SOUND',
+  photography: 'PHOTOGRAPHY'
+};
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -78,7 +83,7 @@ export default function Navigation() {
                 activeSection === section ? linkClasses.active : linkClasses.inactive
               }`}
             >
-              {section.toUpperCase()}
+              {NAV_LABELS[section]}
             </button>
           ))}
         </div>
@@ -96,7 +101,7 @@ export default function Navigation() {
                   activeSection === section ? 'text-white text-base' : 'text-gray-500 text-sm hover:text-gray-300'
                 }`}
               >
-                {section.toUpperCase()}
+                {NAV_LABELS[section]}
               </button>
             ))}
           </div>

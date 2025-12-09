@@ -28,7 +28,7 @@ export default function Home() {
       <div id="scroll-container" className="h-screen overflow-y-scroll snap-y snap-mandatory scroll-smooth">
 
         {/* Home Section */}
-        <section id="home" className="w-screen h-screen snap-start flex flex-col md:flex-row md:pt-16 md:pb-12">
+        <section id="home" className="w-screen h-screen snap-start flex flex-col pt-16 pb-12 md:flex-row md:pt-16 md:pb-12">
           {/* Hero Background Image - Top on mobile, Left on desktop (70%) */}
           <div className="w-full md:w-[70vw] h-2/3 md:h-full bg-black flex-shrink-0">
             <img
@@ -50,7 +50,7 @@ export default function Home() {
         </section>
 
         {/* Music Section */}
-        <section id="music" className="w-screen h-screen snap-start bg-black pt-16 pb-12">
+        <section id="music" className="w-screen h-screen snap-start bg-black pt-16 pb-12 md:pt-0 md:pb-0">
           <div className="flex h-full flex-col md:flex-row">
             {/* Music Video - Top on mobile, Left on desktop (70%) */}
             <div className="w-full md:basis-[70%] md:max-w-[70%] h-2/3 md:h-full flex items-center justify-center bg-zinc-900 p-8 md:p-12">
@@ -99,7 +99,7 @@ export default function Home() {
         </section>
 
         {/* Photography Section */}
-        <section id="photography" className="w-screen snap-start bg-black pt-16 md:h-screen md:pb-12">
+        <section id="photography" className="w-screen snap-start bg-black pt-16 pb-12 md:h-screen md:pt-0 md:pb-0">
           {/* Mobile: Vertical scroll layout */}
           <div className="md:hidden">
             {/* Gallery - Full width stacked images */}
@@ -138,7 +138,7 @@ export default function Home() {
           <div className="hidden md:flex h-full">
             {/* Gallery - Left on desktop (70%) */}
             <div className="basis-[70%] max-w-[70%] h-full overflow-hidden">
-              <div className="h-full overflow-hidden pt-12 pb-12">
+              <div className="h-full overflow-hidden py-12">
                 <GalleryMasonry images={galleryImages} />
               </div>
             </div>

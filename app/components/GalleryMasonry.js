@@ -10,7 +10,7 @@ export default function GalleryMasonry({ images = [] }) {
 
   return (
     <div className="h-full w-full overflow-hidden">
-      <div className="grid h-full w-full gap-2" style={gridStyle}>
+      <div className="grid h-full w-full" style={gridStyle}>
         {images.map(({ src, alt }) => (
           <div
             key={src}
