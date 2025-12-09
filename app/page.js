@@ -52,13 +52,16 @@ export default function Home() {
 
         {/* Music Section */}
         <section id="music" className="w-screen h-screen snap-start flex-shrink-0 flex flex-col">
-          {/* Music Image - Top 2/3 */}
-          <div className="w-full h-2/3 overflow-hidden bg-black">
-            <img
-              src="/images/music.webp"
-              alt="Music"
-              className="w-full h-full object-cover"
-            />
+          {/* Music Video - Top 2/3 */}
+          <div className="w-full h-2/3 bg-black flex items-center justify-center">
+            <video
+              src="/video/WARPZ PROMO DONE (2).mp4"
+              controls
+              className="max-w-full max-h-full object-contain"
+              preload="metadata"
+            >
+              Your browser does not support the video tag.
+            </video>
           </div>
 
           {/* Bottom 1/3 - Audio Player */}

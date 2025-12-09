@@ -2,12 +2,12 @@
 
 import { useEffect, useMemo, useState } from 'react';
 
-const NAV_SECTIONS = ['music', 'photography'];
-const OBSERVE_SECTIONS = ['home', ...NAV_SECTIONS];
+const NAV_SECTIONS = ['home', 'music', 'photography'];
+const OBSERVE_SECTIONS = [...NAV_SECTIONS];
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState('music');
+  const [activeSection, setActiveSection] = useState('home');
 
   useEffect(() => {
     const root = document.getElementById('scroll-container');
@@ -17,8 +17,7 @@ export default function Navigation() {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            const targetId = entry.target.id === 'home' ? 'music' : entry.target.id;
-            setActiveSection(targetId);
+            setActiveSection(entry.target.id);
           }
         });
       },
@@ -55,22 +54,7 @@ export default function Navigation() {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-sm">
-      <div className="w-full px-6 py-4 flex justify-end items-center md:pr-16 lg:pr-28">
-        {/* Desktop Navigation */}
-        <div className="hidden md:flex gap-8">
-          {NAV_SECTIONS.map((section) => (
-            <button
-              key={section}
-              onClick={() => scrollToSection(section)}
-              className={`${linkClasses.base} ${
-                activeSection === section ? linkClasses.active : linkClasses.inactive
-              }`}
-            >
-              {section.toUpperCase()}
-            </button>
-          ))}
-        </div>
-
+      <div className="w-full px-6 py-4 flex items-center justify-between md:justify-end max-w-7xl mx-auto">
         {/* Mobile Menu Button */}
         <button
           onClick={() => setIsOpen(!isOpen)}
@@ -83,6 +67,21 @@ export default function Navigation() {
             <span className={`block h-0.5 w-full bg-white transition-all ${isOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
           </div>
         </button>
+
+        {/* Desktop Navigation */}
+        <div className="hidden md:flex w-[32vw] min-w-[240px] max-w-[420px] justify-center gap-8">
+          {NAV_SECTIONS.map((section) => (
+            <button
+              key={section}
+              onClick={() => scrollToSection(section)}
+              className={`${linkClasses.base} ${
+                activeSection === section ? linkClasses.active : linkClasses.inactive
+              }`}
+            >
+              {section.toUpperCase()}
+            </button>
+          ))}
+        </div>
       </div>
 
       {/* Mobile Menu */}
