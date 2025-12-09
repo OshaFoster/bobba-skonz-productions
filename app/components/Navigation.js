@@ -58,8 +58,8 @@ export default function Navigation() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-sm">
-      <div className="w-full py-4 flex items-center">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-sm" style={{ paddingTop: 'var(--safe-area-inset-top)' }}>
+      <div className="w-full py-4 flex items-center" style={{ paddingLeft: 'var(--safe-area-inset-left)', paddingRight: 'var(--safe-area-inset-right)' }}>
         {/* Mobile Menu Button */}
         <button
           onClick={() => setIsOpen(!isOpen)}

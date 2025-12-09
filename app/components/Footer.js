@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
-    <footer className="fixed bottom-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-sm border-t border-white/10">
-      <div className="max-w-7xl mx-auto px-6 py-3 flex justify-center items-center gap-12">
+    <footer className="fixed bottom-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-sm border-t border-white/10" style={{ paddingBottom: 'var(--safe-area-inset-bottom)' }}>
+      <div className="max-w-7xl mx-auto px-6 py-3 flex justify-center items-center gap-12" style={{ paddingLeft: 'var(--safe-area-inset-left)', paddingRight: 'var(--safe-area-inset-right)' }}>
         {/* Spotify */}
         <a
           href="#"
