@@ -54,11 +54,11 @@ export default function Navigation() {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-sm">
-      <div className="w-full px-6 py-4 flex items-center justify-between md:justify-end max-w-7xl mx-auto">
+      <div className="w-full py-4 flex items-center">
         {/* Mobile Menu Button */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden text-white p-2"
+          className="md:hidden text-white p-2 ml-6"
           aria-label="Toggle menu"
         >
           <div className="w-6 h-5 flex flex-col justify-between">
@@ -69,7 +69,7 @@ export default function Navigation() {
         </button>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex w-[32vw] min-w-[240px] max-w-[420px] justify-center gap-8">
+        <div className="hidden md:flex gap-8 ml-auto mr-[50px]">
           {NAV_SECTIONS.map((section) => (
             <button
               key={section}

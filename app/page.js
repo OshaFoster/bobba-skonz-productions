@@ -28,9 +28,9 @@ export default function Home() {
       <div id="scroll-container" className="h-screen overflow-y-scroll snap-y snap-mandatory scroll-smooth">
 
         {/* Home Section */}
-        <section id="home" className="w-screen h-screen snap-start flex pt-16 pb-12">
-          {/* Hero Background Image - Left Side (70%) */}
-          <div className="w-[70vw] h-full bg-black flex-shrink-0">
+        <section id="home" className="w-screen h-screen snap-start flex flex-col md:flex-row md:pt-16 md:pb-12">
+          {/* Hero Background Image - Top on mobile, Left on desktop (70%) */}
+          <div className="w-full md:w-[70vw] h-2/3 md:h-full bg-black flex-shrink-0">
             <img
               src="/images/hero.webp"
               alt="Hero"
@@ -38,8 +38,8 @@ export default function Home() {
             />
           </div>
 
-          {/* Right Side - Black Background with Title (30%) */}
-          <div className="w-[30vw] h-full flex flex-col justify-center bg-black px-6 lg:px-8 flex-shrink-0">
+          {/* Title - Bottom on mobile, Right on desktop (30%) */}
+          <div className="w-full md:w-[30vw] h-1/3 md:h-full flex flex-col justify-center bg-black px-6 lg:px-8 flex-shrink-0">
             <div>
               <h1 className="font-light tracking-wider text-white leading-tight">
                 <span className="text-4xl md:text-5xl lg:text-6xl block" style={{ fontFamily: "'Barrio', sans-serif" }}>BOBBA SKONZ</span>
@@ -50,10 +50,10 @@ export default function Home() {
         </section>
 
         {/* Music Section */}
-        <section id="music" className="w-screen h-screen snap-start bg-black">
+        <section id="music" className="w-screen h-screen snap-start bg-black pt-16 pb-12">
           <div className="flex h-full flex-col md:flex-row">
-            {/* Left Side - Music Video (70%) */}
-            <div className="md:basis-[70%] md:max-w-[70%] h-full flex items-center justify-center bg-zinc-900 p-8 md:p-12">
+            {/* Music Video - Top on mobile, Left on desktop (70%) */}
+            <div className="w-full md:basis-[70%] md:max-w-[70%] h-2/3 md:h-full flex items-center justify-center bg-zinc-900 p-8 md:p-12">
               <video
                 src="/video/WARPZ PROMO DONE (2).mp4"
                 controls
@@ -64,8 +64,8 @@ export default function Home() {
               </video>
             </div>
 
-            {/* Right Side - Song Info (30%) */}
-            <div className="md:basis-[30%] md:max-w-[30%] h-full flex flex-col justify-center bg-black border-t border-white/10 md:border-t-0 md:border-l md:border-white/10 px-8 py-10 space-y-8">
+            {/* Song Info - Bottom on mobile, Right on desktop (30%) */}
+            <div className="w-full md:basis-[30%] md:max-w-[30%] h-1/3 md:h-full flex flex-col justify-center bg-black border-t border-white/10 md:border-t-0 md:border-l md:border-white/10 px-8 py-10 space-y-8">
               <div className="space-y-6">
                 <div>
                   <h2 className="text-4xl md:text-5xl font-light tracking-wider text-white mb-2" style={{ fontFamily: "'Barrio', sans-serif" }}>
@@ -99,23 +99,60 @@ export default function Home() {
         </section>
 
         {/* Photography Section */}
-        <section id="photography" className="w-screen h-screen snap-start bg-black">
-          <div className="flex h-full flex-col md:flex-row">
-            <div className="md:basis-[70%] md:max-w-[70%] h-full overflow-hidden">
+        <section id="photography" className="w-screen snap-start bg-black pt-16 md:h-screen md:pb-12">
+          {/* Mobile: Vertical scroll layout */}
+          <div className="md:hidden">
+            {/* Gallery - Full width stacked images */}
+            <div className="w-full px-4 space-y-4">
+              {galleryImages.map((image, index) => (
+                <div key={index} className="w-full">
+                  <img src={image.src} alt={image.alt} className="w-full h-auto block" />
+                </div>
+              ))}
+            </div>
+
+            {/* Gallery Info - After all images */}
+            <div className="w-full flex flex-col justify-center items-center bg-black border-t border-white/10 px-8 py-10 space-y-6">
+              <div className="w-full max-w-sm overflow-hidden">
+                <img
+                  src="/images/about.webp"
+                  alt="Gallery Feature"
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+              <div className="w-full max-w-sm space-y-3 text-sm text-gray-300 leading-relaxed">
+                <h3 className="text-xl font-light tracking-wider text-white" style={{ fontFamily: "'Barrio', sans-serif" }}>
+                  VISUAL STORIES
+                </h3>
+                <p className="text-xs">
+                  Spotlight moments from recent shoots, showcasing the bold energy behind Bobba Skonz Productions. Larger frames highlight the latest work while the flow keeps every shot connected.
+                </p>
+                <p className="text-xs">
+                  Stay tuned for rotating features, behind-the-scenes glimpses, and future announcements from the studio.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Desktop: Side-by-side layout */}
+          <div className="hidden md:flex h-full">
+            {/* Gallery - Left on desktop (70%) */}
+            <div className="basis-[70%] max-w-[70%] h-full overflow-hidden">
               <div className="h-full overflow-hidden pt-12 pb-12">
                 <GalleryMasonry images={galleryImages} />
               </div>
             </div>
 
-            <div className="md:basis-[30%] md:max-w-[30%] h-full flex flex-col justify-center items-center bg-black border-t border-white/10 md:border-t-0 md:border-l md:border-white/10 px-8 py-10 space-y-8">
+            {/* Gallery Info - Right on desktop (30%) */}
+            <div className="basis-[30%] max-w-[30%] h-full flex flex-col justify-center items-center bg-black border-l border-white/10 px-8 py-10 space-y-8">
               <div className="w-full max-w-sm overflow-hidden">
                 <img
                   src="/images/about.webp"
                   alt="Gallery Feature"
-                  className="w-full object-cover"
+                  className="w-full h-auto object-cover"
                 />
               </div>
-              <div className="w-full max-w-sm space-y-4 text-sm text-gray-300 leading-relaxed">
+              <div className="w-full max-w-sm space-y-3 text-sm text-gray-300 leading-relaxed">
                 <h3 className="text-2xl font-light tracking-wider text-white" style={{ fontFamily: "'Barrio', sans-serif" }}>
                   VISUAL STORIES
                 </h3>
