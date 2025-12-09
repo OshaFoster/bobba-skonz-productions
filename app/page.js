@@ -1,5 +1,4 @@
 import Navigation from './components/Navigation';
-import AudioPlayer from './components/AudioPlayer';
 import Footer from './components/Footer';
 import GalleryMasonry from './components/GalleryMasonry';
 
@@ -25,17 +24,17 @@ export default function Home() {
       <Navigation />
       <Footer />
 
-      {/* Horizontal Scrolling Container */}
-      <div id="scroll-container" className="flex h-screen overflow-x-scroll overflow-y-hidden snap-x snap-mandatory scroll-smooth">
+      {/* Vertical Scrolling Container */}
+      <div id="scroll-container" className="h-screen overflow-y-scroll snap-y snap-mandatory scroll-smooth">
 
         {/* Home Section */}
-        <section id="home" className="w-screen h-screen snap-start flex-shrink-0 flex">
+        <section id="home" className="w-screen h-screen snap-start flex pt-16 pb-12">
           {/* Hero Background Image - Left Side (70%) */}
-          <div className="w-[70vw] h-full flex items-center justify-center bg-black flex-shrink-0">
+          <div className="w-[70vw] h-full bg-black flex-shrink-0">
             <img
               src="/images/hero.webp"
               alt="Hero"
-              className="h-full object-contain"
+              className="w-full h-full object-cover"
             />
           </div>
 
@@ -51,35 +50,56 @@ export default function Home() {
         </section>
 
         {/* Music Section */}
-        <section id="music" className="w-screen h-screen snap-start flex-shrink-0 flex flex-col">
-          {/* Music Video - Top 2/3 */}
-          <div className="w-full h-2/3 bg-black flex items-center justify-center">
-            <video
-              src="/video/WARPZ PROMO DONE (2).mp4"
-              controls
-              className="max-w-full max-h-full object-contain"
-              preload="metadata"
-            >
-              Your browser does not support the video tag.
-            </video>
-          </div>
-
-          {/* Bottom 1/3 - Audio Player */}
-          <div className="w-full h-1/3 flex flex-col md:flex-row items-center justify-between bg-black px-8 lg:px-16 gap-8">
-            <div className="text-center md:text-left">
-              <h2 className="font-light tracking-wider text-white text-2xl md:text-3xl" style={{ fontFamily: "'Barrio', sans-serif" }}>
-                CURRENT MIX
-              </h2>
-              <p className="mt-3 text-sm text-gray-300 max-w-md">
-                Press play to experience the latest cut straight from the studio.
-              </p>
+        <section id="music" className="w-screen h-screen snap-start bg-black">
+          <div className="flex h-full flex-col md:flex-row">
+            {/* Left Side - Music Video (70%) */}
+            <div className="md:basis-[70%] md:max-w-[70%] h-full flex items-center justify-center bg-zinc-900 p-8 md:p-12">
+              <video
+                src="/video/WARPZ PROMO DONE (2).mp4"
+                controls
+                className="max-w-full h-auto max-h-[75vh] object-contain"
+                preload="metadata"
+              >
+                Your browser does not support the video tag.
+              </video>
             </div>
-            <AudioPlayer audioSrc="/audio/LANDR-warps mixed2-Balanced-Medium-REV_V2.m4a" />
+
+            {/* Right Side - Song Info (30%) */}
+            <div className="md:basis-[30%] md:max-w-[30%] h-full flex flex-col justify-center bg-black border-t border-white/10 md:border-t-0 md:border-l md:border-white/10 px-8 py-10 space-y-8">
+              <div className="space-y-6">
+                <div>
+                  <h2 className="text-4xl md:text-5xl font-light tracking-wider text-white mb-2" style={{ fontFamily: "'Barrio', sans-serif" }}>
+                    WARPZ
+                  </h2>
+                  <p className="text-sm text-gray-400 tracking-wide">
+                    SINGLE
+                  </p>
+                </div>
+
+                <div className="space-y-4 text-sm text-gray-300 leading-relaxed">
+                  <p>
+                    A sonic journey through layered beats and atmospheric textures. WARPZ pushes boundaries with its hypnotic rhythms and bold production.
+                  </p>
+                  <p>
+                    Experience the energy that defines Bobba Skonz Productions - raw, authentic, and unapologetically creative.
+                  </p>
+                </div>
+
+                <div className="pt-4 border-t border-white/10">
+                  <p className="text-xs text-gray-400 uppercase tracking-wider mb-2">
+                    Release Date
+                  </p>
+                  <p className="text-sm text-white">
+                    Coming Soon
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
         {/* Photography Section */}
-        <section id="photography" className="w-screen h-screen snap-start flex-shrink-0 bg-black">
+        <section id="photography" className="w-screen h-screen snap-start bg-black">
           <div className="flex h-full flex-col md:flex-row">
             <div className="md:basis-[70%] md:max-w-[70%] h-full overflow-hidden">
               <div className="h-full overflow-hidden pt-12 pb-12">
