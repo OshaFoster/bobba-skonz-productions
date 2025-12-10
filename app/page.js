@@ -34,9 +34,9 @@ export default function Home() {
       >
 
         {/* Home Section */}
-        <section id="home" className="w-screen min-h-screen md:h-screen snap-start flex flex-col pt-16 pb-12 md:flex-row md:pt-16 md:pb-12">
+        <section id="home" className="w-screen min-h-screen md:h-screen snap-start flex flex-col justify-center md:flex-row md:pt-16 md:pb-12">
           {/* Hero Background Image - Top on mobile, Left on desktop (70%) */}
-          <div className="w-full md:w-[70vw] h-2/3 md:h-full bg-black flex-shrink-0">
+          <div className="w-full md:w-[70vw] h-2/3 md:h-full bg-black flex-shrink-0 mt-4 md:mt-0">
             <img
               src="/images/hero.webp"
               alt="Hero"
@@ -45,7 +45,7 @@ export default function Home() {
           </div>
 
           {/* Title - Bottom on mobile, Right on desktop (30%) */}
-          <div className="w-full md:w-[30vw] h-1/3 md:h-full flex flex-col justify-center bg-black px-6 py-4 lg:px-8 flex-shrink-0">
+          <div className="w-full md:w-[30vw] h-1/3 md:h-full flex flex-col justify-center bg-black px-6 py-4 lg:px-8 flex-shrink-0 mb-4 md:mb-0">
             <div>
               <h1 className="font-light tracking-wider text-white leading-tight">
                 <span className="text-3xl md:text-5xl lg:text-6xl block" style={{ fontFamily: "'Barrio', sans-serif" }}>BOBBA SKONZ</span>
@@ -56,7 +56,7 @@ export default function Home() {
         </section>
 
         {/* Music Section */}
-        <section id="music" className="w-screen min-h-screen md:h-screen snap-start bg-black pt-16 pb-12 md:pt-0 md:pb-0">
+        <section id="music" className="w-screen min-h-screen md:h-screen snap-start bg-black md:pt-0 md:pb-0">
           <div className="flex h-full flex-col md:flex-row">
             {/* Music Video - Top on mobile, Left on desktop (70%) */}
             <div className="w-full md:basis-[70%] md:max-w-[70%] h-2/3 md:h-full flex items-center justify-center bg-zinc-900 p-4 md:p-12">
@@ -105,7 +105,7 @@ export default function Home() {
         </section>
 
         {/* Photography Section */}
-        <section id="photography" className="w-screen md:h-screen snap-start bg-black pt-16 pb-12 md:pt-0 md:pb-0">
+        <section id="photography" className="w-screen md:h-screen snap-start bg-black py-8 md:pt-0 md:pb-0">
           {/* Mobile: Vertical scroll layout */}
           <div className="md:hidden">
             {/* Gallery - Full width stacked images */}
