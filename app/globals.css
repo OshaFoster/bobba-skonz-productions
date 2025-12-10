@@ -38,6 +38,7 @@ body {
 #scroll-container {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
+  -webkit-overflow-scrolling: touch;
 }
 
 /* Breathing animation for audio player rings */
