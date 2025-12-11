@@ -26,7 +26,7 @@ export default function Home() {
       {/* Vertical Scrolling Container */}
       <div
         id="scroll-container"
-        className="h-full overflow-y-auto scroll-smooth snap-y snap-proximity md:snap-mandatory"
+        className="h-full overflow-y-auto scroll-smooth md:snap-y md:snap-mandatory"
         style={{
           paddingTop: '5rem',
           paddingBottom: '4rem'
@@ -34,18 +34,18 @@ export default function Home() {
       >
 
         {/* Home Section */}
-        <section id="home" className="w-screen min-h-screen md:h-screen snap-start flex flex-col justify-center md:flex-row md:pt-16 md:pb-12">
+        <section id="home" className="w-screen h-screen md:snap-start flex flex-col justify-center items-center -mt-16 md:mt-0 md:flex-row md:pt-16 md:pb-12 md:items-stretch md:justify-start">
           {/* Hero Background Image - Top on mobile, Left on desktop (70%) */}
-          <div className="w-full md:w-[70vw] h-2/3 md:h-full bg-black flex-shrink-0">
+          <div className="w-full max-w-md md:max-w-none md:w-[70vw] md:h-full bg-black flex-shrink-0">
             <img
               src="/images/hero.webp"
               alt="Hero"
-              className="w-full h-full object-cover"
+              className="w-full h-auto md:h-full md:object-cover"
             />
           </div>
 
           {/* Title - Bottom on mobile, Right on desktop (30%) */}
-          <div className="w-full md:w-[30vw] h-1/3 md:h-full flex flex-col justify-center bg-black px-6 py-4 lg:px-8 flex-shrink-0">
+          <div className="w-full max-w-md md:max-w-none md:w-[30vw] md:h-full flex flex-col justify-center bg-black border-t border-white/10 md:border-t-0 px-6 py-4 md:py-6 lg:px-8 flex-shrink-0">
             <div>
               <h1 className="font-light tracking-wider text-white leading-tight">
                 <span className="text-3xl md:text-5xl lg:text-6xl block" style={{ fontFamily: "'Barrio', sans-serif" }}>BOBBA SKONZ</span>
@@ -56,10 +56,9 @@ export default function Home() {
         </section>
 
         {/* Music Section */}
-        <section id="music" className="w-screen min-h-screen md:h-screen snap-start bg-black md:pt-0 md:pb-0">
-          <div className="flex h-full flex-col pt-40 pb-4 md:pt-0 md:pb-0 md:flex-row">
+        <section id="music" className="w-screen h-screen md:snap-start bg-black flex flex-col justify-center items-center -mt-16 md:mt-0 md:flex-row md:items-stretch md:justify-start md:pt-0 md:pb-0">
             {/* Music Video - Top on mobile, Left on desktop (70%) */}
-            <div className="w-full md:basis-[70%] md:max-w-[70%] flex-1 md:h-full flex items-start justify-center bg-zinc-900 p-4 pt-8 md:items-center md:p-12">
+            <div className="w-full max-w-md md:max-w-none md:basis-[70%] md:h-full flex items-center justify-center bg-zinc-900 p-4 md:p-12">
               <video
                 src="/video/WARPZ PROMO DONE (2).mp4"
                 controls
@@ -71,7 +70,7 @@ export default function Home() {
             </div>
 
             {/* Song Info - Bottom on mobile, Right on desktop (30%) */}
-            <div className="w-full md:basis-[30%] md:max-w-[30%] flex-shrink-0 md:h-full flex flex-col justify-center bg-black border-t border-white/10 md:border-t-0 md:border-l md:border-white/10 px-6 py-4 md:px-8 md:py-10 space-y-3 md:space-y-8">
+            <div className="w-full max-w-md md:max-w-none md:basis-[30%] md:h-full flex flex-col justify-center bg-black border-t border-white/10 md:border-t-0 md:border-l md:border-white/10 px-6 py-4 md:px-8 md:py-10 space-y-3 md:space-y-8">
               <div className="space-y-3 md:space-y-6">
                 <div>
                   <h2 className="text-3xl md:text-5xl font-light tracking-wider text-white mb-1 md:mb-2" style={{ fontFamily: "'Barrio', sans-serif" }}>
@@ -101,15 +100,14 @@ export default function Home() {
                 </div>
               </div>
             </div>
-          </div>
         </section>
 
         {/* Photography Section */}
-        <section id="photography" className="w-screen md:h-screen md:snap-start bg-black py-8 md:pt-0 md:pb-0">
+        <section id="photography" className="w-screen md:h-screen md:snap-start bg-black md:pt-0 md:pb-0">
           {/* Mobile: Vertical scroll layout */}
           <div className="md:hidden">
             {/* Gallery - Full width stacked images */}
-            <div className="w-full px-4 space-y-4">
+            <div className="w-full px-4 pt-4 space-y-4">
               {galleryImages.map((image, index) => (
                 <div key={index} className="w-full">
                   <img src={image.src} alt={image.alt} className="w-full h-auto block" />
