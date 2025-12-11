@@ -34,7 +34,8 @@ export default function Home() {
       >
 
         {/* Home Section */}
-        <section id="home" className="w-screen h-screen md:snap-start flex flex-col justify-center items-center -mt-16 md:mt-0 md:flex-row md:pt-16 md:pb-12 md:items-stretch md:justify-start">
+        <section id="home" className="relative w-screen h-screen md:snap-start flex flex-col justify-center items-center -mt-20 md:mt-0 pb-px md:pb-0 md:flex-row md:pt-16 md:pb-12 md:items-stretch md:justify-start">
+          <div className="absolute bottom-0 left-0 right-0 h-px bg-white/30 md:hidden z-10"></div>
           {/* Hero Background Image - Top on mobile, Left on desktop (70%) */}
           <div className="w-full max-w-md md:max-w-none md:w-[70vw] md:h-full bg-black flex-shrink-0">
             <img
@@ -56,7 +57,8 @@ export default function Home() {
         </section>
 
         {/* Music Section */}
-        <section id="music" className="w-screen h-screen md:snap-start bg-black flex flex-col justify-center items-center -mt-16 md:mt-0 md:flex-row md:items-stretch md:justify-start md:pt-0 md:pb-0">
+        <section id="music" className="relative w-screen h-screen md:snap-start bg-black flex flex-col justify-center items-center -mt-16 md:mt-0 pb-px md:pb-0 md:flex-row md:items-stretch md:justify-start md:pt-0 md:pb-0">
+          <div className="absolute bottom-0 left-0 right-0 h-px bg-white/30 md:hidden"></div>
             {/* Music Video - Top on mobile, Left on desktop (70%) */}
             <div className="w-full max-w-md md:max-w-none md:basis-[70%] md:h-full flex items-center justify-center bg-zinc-900 p-4 md:p-12">
               <video
