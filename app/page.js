@@ -110,7 +110,7 @@ export default function Home() {
                           WARPZ
                         </h5>
                         <a
-                          href="https://youtube.com/shorts/TrLi0UXw0Ss?si=Lv2EEBOCDTxhwWEu"
+                          href="https://www.youtube.com/shorts/Oj3qtv1MrKI"
                           target="_blank"
                           rel="noopener noreferrer"
                           className="text-[#a108a1] hover:text-[#b31ab3] transition-colors"
