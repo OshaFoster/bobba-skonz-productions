@@ -1,6 +1,7 @@
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import GalleryMasonry from './components/GalleryMasonry';
+import AudioButton from './components/AudioButton';
 
 const galleryImages = [
   { src: '/images/gallery2.webp', alt: 'Gallery 2' },
@@ -82,13 +83,7 @@ export default function Home() {
                       ALBUM
                     </p>
                   </div>
-                  <div className="mb-4 flex justify-start">
-                    <button className="w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 border-2 border-white/50 flex items-center justify-center transition-all">
-                      <svg className="w-6 h-6 text-white ml-0.5" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M8 5v14l11-7z"/>
-                      </svg>
-                    </button>
-                  </div>
+                  <AudioButton />
                   <div className="space-y-3 text-sm md:text-base leading-relaxed">
                     <p>
                       It Keeps Getting Better is a fully self-produced album that blurs reality and imagination—finding peace in the midst of chaos. Built at the intersection of hip-hop, psychedelics, and lived experience, the project explores identity, perception, and the social constructs we're shaped by—questioning everything beneath the surface.
