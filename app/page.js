@@ -74,10 +74,10 @@ export default function Home() {
                       loop
                       muted
                       playsInline
+                      preload="auto"
                       className="w-full h-full object-cover"
-                    >
-                      <source src="/video/Album cover GIF.mp4" type="video/mp4" />
-                    </video>
+                      src="/video/Album cover GIF.mp4"
+                    />
                   </div>
                 </div>
 
