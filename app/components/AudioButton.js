@@ -38,7 +38,9 @@ export default function AudioButton() {
     <>
       <button
         onClick={handleClick}
-        className="group relative w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 border-2 border-white/50 flex items-center justify-center overflow-hidden transition-all"
+        className={`group relative w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 border-2 flex items-center justify-center overflow-hidden transition-all ${
+          isPlaying ? 'border-black' : 'border-white/50'
+        }`}
       >
         {/* Fill animation - from bottom */}
         {!isDraining && (
