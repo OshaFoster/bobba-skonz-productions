@@ -48,9 +48,9 @@ export default function Home() {
             </div>
             {/* Keywords - Right (30%) */}
             <div className="w-full md:w-[30%] h-1/2 md:h-full flex flex-row md:flex-col justify-center items-center md:items-start gap-4 md:gap-0 md:space-y-6">
-              <h2 className="text-xl md:text-4xl lg:text-5xl font-light tracking-wider text-white" style={{ fontFamily: "'Barrio', sans-serif" }}>SOUND</h2>
-              <h2 className="text-xl md:text-4xl lg:text-5xl font-light tracking-wider text-white" style={{ fontFamily: "'Barrio', sans-serif" }}>VISUALS</h2>
-              <h2 className="text-xl md:text-4xl lg:text-5xl font-light tracking-wider text-white" style={{ fontFamily: "'Barrio', sans-serif" }}>MEDIA</h2>
+              <h2 className="text-xl md:text-4xl lg:text-5xl font-light tracking-wider text-white animate-[fadeInUp_0.8s_ease-out_0.3s_both]" style={{ fontFamily: "'Barrio', sans-serif" }}>SOUND</h2>
+              <h2 className="text-xl md:text-4xl lg:text-5xl font-light tracking-wider text-white animate-[fadeInUp_0.8s_ease-out_0.6s_both]" style={{ fontFamily: "'Barrio', sans-serif" }}>VISUALS</h2>
+              <h2 className="text-xl md:text-4xl lg:text-5xl font-light tracking-wider text-white animate-[fadeInUp_0.8s_ease-out_0.9s_both]" style={{ fontFamily: "'Barrio', sans-serif" }}>MEDIA</h2>
             </div>
           </div>
         </section>
