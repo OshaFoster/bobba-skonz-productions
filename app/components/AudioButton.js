@@ -63,7 +63,7 @@ export default function AudioButton() {
         {/* Play/Pause Icon */}
         <svg
           className={`relative z-10 w-6 h-6 transition-colors duration-300 ${
-            isPlaying ? 'text-black' : 'text-white'
+            isPlaying ? 'text-black' : 'text-white group-hover:text-black'
           } ${!isPlaying ? 'ml-0.5' : ''}`}
           fill="currentColor"
           viewBox="0 0 24 24"
