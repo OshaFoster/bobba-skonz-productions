@@ -1,11 +1,12 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 
 export default function AudioButton() {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isDraining, setIsDraining] = useState(false);
   const [drainStart, setDrainStart] = useState(false);
+  const audioRef = useRef(null);
 
   useEffect(() => {
     if (isDraining) {
@@ -24,9 +25,11 @@ export default function AudioButton() {
 
   const handleClick = () => {
     if (isPlaying) {
+      audioRef.current?.pause();
       setIsDraining(true);
       setIsPlaying(false);
     } else {
+      audioRef.current?.play();
       setIsPlaying(true);
     }
   };
@@ -70,6 +73,9 @@ export default function AudioButton() {
           )}
         </svg>
       </button>
+
+      {/* Hidden audio element */}
+      <audio ref={audioRef} src="/audio/LANDR-warps mixed2-Balanced-Medium-REV_V2.m4a" />
     </div>
   );
 }
