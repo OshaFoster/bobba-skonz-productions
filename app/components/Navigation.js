@@ -60,7 +60,7 @@ export default function Navigation() {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-sm" style={{ paddingTop: 'var(--safe-area-inset-top)' }}>
-      <div className="w-full flex items-center justify-between px-6 py-6 md:px-0 md:py-6" style={{ paddingLeft: 'var(--safe-area-inset-left)', paddingRight: 'var(--safe-area-inset-right)' }}>
+      <div className="max-w-[1600px] mx-auto w-full flex items-center justify-between px-6 py-6 md:px-0 md:py-6 border-l border-r border-white/15" style={{ paddingLeft: 'var(--safe-area-inset-left)', paddingRight: 'var(--safe-area-inset-right)' }}>
         {/* Logo/Brand */}
         <div className="md:ml-[50px]">
           <h1 className="font-light tracking-wider text-white">

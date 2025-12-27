@@ -26,11 +26,11 @@ export default function Home() {
       {/* Vertical Scrolling Container */}
       <div
         id="scroll-container"
-        className="absolute top-[5rem] bottom-[4rem] left-0 right-0 overflow-y-auto scroll-smooth md:snap-y md:snap-mandatory"
+        className="absolute top-[5rem] bottom-[4rem] left-0 right-0 overflow-y-auto scroll-smooth md:snap-y md:snap-mandatory max-w-[1600px] mx-auto border-l border-r border-white/15"
       >
 
         {/* Home Section */}
-        <section id="home" className="relative w-screen h-full md:snap-start flex justify-center items-center pb-px md:pb-0">
+        <section id="home" className="relative w-full h-full md:snap-start flex justify-center items-center pb-px md:pb-0">
           <div className="absolute bottom-0 left-0 right-0 h-px bg-white/30 md:hidden z-10"></div>
           {/* Hero Section - Logo and Text */}
           <div className="w-full h-full bg-black flex flex-col md:flex-row items-center">
@@ -53,10 +53,10 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Sound Section */}
-        <section id="sound" className="relative w-screen h-screen md:snap-start bg-black flex flex-col justify-center items-center -mt-16 md:mt-0 pb-px md:pb-0">
+          {/* Sound Section */}
+          <section id="sound" className="relative w-full md:snap-start bg-black flex flex-col justify-start items-center -mt-16 md:mt-2 pb-px md:pb-0 border-t border-b border-white/15">
           <div className="absolute bottom-0 left-0 right-0 h-px bg-white/30 md:hidden"></div>
-          <div className="w-full h-full overflow-y-auto px-6 md:px-12 py-8 md:py-12">
+          <div className="w-full px-6 md:px-12 py-8 md:py-12">
             <div className="max-w-6xl mx-auto flex flex-col justify-start space-y-10">
               {/* Section Title */}
               <h2 className="text-3xl md:text-5xl font-light tracking-wider text-white text-center mb-8 md:mb-10" style={{ fontFamily: "'Barrio', sans-serif" }}>
@@ -147,8 +147,8 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Visuals Section */}
-        <section id="visuals" className="w-screen md:snap-start bg-black">
+          {/* Visuals Section */}
+          <section id="visuals" className="w-full md:snap-start bg-black border-b border-white/15">
           <div className="w-full overflow-y-auto">
             {/* Header Image - Desktop Only */}
             <div className="hidden md:block w-full px-12 pt-12">
@@ -247,10 +247,10 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Media Section */}
-        <section id="media" className="relative w-screen h-screen md:snap-start bg-black flex flex-col justify-start items-center pb-px md:pb-0">
+          {/* Media Section */}
+          <section id="media" className="relative w-full md:snap-start bg-black flex flex-col justify-start items-center pb-px md:pb-0">
           <div className="absolute bottom-0 left-0 right-0 h-px bg-white/30 md:hidden"></div>
-          <div className="w-full h-full overflow-y-auto px-6 md:px-12 py-12 md:py-16">
+          <div className="w-full px-6 md:px-12 py-12 md:py-16">
             <div className="space-y-8 max-w-3xl mx-auto">
               <h2 className="text-3xl md:text-5xl font-light tracking-wider text-white text-center mb-8 md:mb-10" style={{ fontFamily: "'Barrio', sans-serif" }}>
                 MEDIA

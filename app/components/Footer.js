@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
-    <footer className="fixed bottom-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-sm border-t border-white/10" style={{ paddingBottom: 'var(--safe-area-inset-bottom)' }}>
-      <div className="max-w-7xl mx-auto px-6 py-3 flex justify-center items-center gap-12" style={{ paddingLeft: 'var(--safe-area-inset-left)', paddingRight: 'var(--safe-area-inset-right)' }}>
+    <footer className="fixed bottom-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-sm" style={{ paddingBottom: 'var(--safe-area-inset-bottom)' }}>
+      <div className="max-w-[1600px] mx-auto px-6 py-3 flex justify-center items-center gap-12 border-l border-r border-white/15" style={{ paddingLeft: 'var(--safe-area-inset-left)', paddingRight: 'var(--safe-area-inset-right)' }}>
         {/* Spotify */}
         <a
           href="https://open.spotify.com/artist/71BKlt0zHBUbuBSuM4yvI4?si=LOKCbIQkRVW8Bmvd_dNuAQ&nd=1&dlsi=abf2d80708c0474b"
