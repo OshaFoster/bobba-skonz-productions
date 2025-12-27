@@ -91,15 +91,15 @@ export default function Home() {
                       Layered throughout are metaphors and references to the movies, cartoons, and artists that shaped me—threads of nostalgia woven into the narrative. The album evolves as it unfolds, with every song adding a new layer to the story. My intention was to create something timeless—an album that deepens all the way through.
                     </p>
                   </div>
-                  <div className="mt-6 flex items-center gap-4">
-                    <AudioButton />
-                    <div>
-                      <h4 className="text-xl md:text-2xl font-light tracking-wider text-white" style={{ fontFamily: "'Barrio', sans-serif" }}>
+                  <div className="mt-6">
+                    <p className="text-xs text-gray-400 tracking-wide mb-3">
+                      LISTEN
+                    </p>
+                    <div className="flex items-center gap-4">
+                      <AudioButton />
+                      <h5 className="text-xl md:text-2xl font-light tracking-wider text-white" style={{ fontFamily: "'Barrio', sans-serif" }}>
                         WARPZ
-                      </h4>
-                      <p className="text-xs text-gray-400 tracking-wide">
-                        SAMPLE
-                      </p>
+                      </h5>
                     </div>
                   </div>
                 </div>
