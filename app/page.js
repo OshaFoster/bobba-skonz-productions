@@ -68,8 +68,16 @@ export default function Home() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 pb-6">
                 {/* Album Cover */}
                 <div className="flex flex-col items-center md:items-start">
-                  <div className="w-full max-w-md aspect-[4/5] bg-zinc-800 flex items-center justify-center">
-                    <p className="text-gray-500 text-xs">Album Cover</p>
+                  <div className="w-full max-w-md aspect-[4/5] bg-zinc-800 overflow-hidden">
+                    <video
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      className="w-full h-full object-cover"
+                    >
+                      <source src="/video/Album cover GIF.mp4" type="video/mp4" />
+                    </video>
                   </div>
                 </div>
 
@@ -97,9 +105,22 @@ export default function Home() {
                     </p>
                     <div className="flex items-center gap-4">
                       <AudioButton />
-                      <h5 className="text-xl md:text-2xl font-light tracking-wider text-white" style={{ fontFamily: "'Barrio', sans-serif" }}>
-                        WARPZ
-                      </h5>
+                      <div className="flex items-center gap-3">
+                        <h5 className="text-xl md:text-2xl font-light tracking-wider text-white" style={{ fontFamily: "'Barrio', sans-serif" }}>
+                          WARPZ
+                        </h5>
+                        <a
+                          href="https://youtube.com/shorts/TrLi0UXw0Ss?si=Lv2EEBOCDTxhwWEu"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-[#a108a1] hover:text-[#b31ab3] transition-colors"
+                          aria-label="Watch WARPZ on YouTube"
+                        >
+                          <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M23.994 6.124a3.016 3.016 0 00-2.12-2.133C19.99 3.503 12 3.503 12 3.503s-7.99 0-9.874.488A3.016 3.016 0 00.006 6.124 31.544 31.544 0 000 12.003a31.544 31.544 0 00.006 5.879 3.016 3.016 0 002.12 2.133c1.884.488 9.874.488 9.874.488s7.99 0 9.874-.488a3.016 3.016 0 002.12-2.133 31.544 31.544 0 00.006-5.879 31.544 31.544 0 00-.006-5.879zM9.545 15.568V8.437l6.608 3.565-6.608 3.566z"/>
+                          </svg>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
