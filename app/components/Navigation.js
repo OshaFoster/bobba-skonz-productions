@@ -60,9 +60,9 @@ export default function Navigation() {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-sm" style={{ paddingTop: 'var(--safe-area-inset-top)' }}>
-      <div className="max-w-[1600px] mx-auto w-full flex items-center justify-between px-6 py-6 md:px-0 md:py-6 border-l border-r border-white/15" style={{ paddingLeft: 'var(--safe-area-inset-left)', paddingRight: 'var(--safe-area-inset-right)' }}>
+      <div className="max-w-[1600px] mx-auto w-full flex items-center justify-between py-6 md:px-0 md:py-6 border-l border-r border-white/15" style={{ paddingLeft: 'var(--safe-area-inset-left)', paddingRight: 'var(--safe-area-inset-right)' }}>
         {/* Logo/Brand */}
-        <div className="md:ml-[50px]">
+        <div className="pl-6 md:pl-0 md:ml-[50px]">
           <h1 className="font-light tracking-wider text-white">
             <span className="text-base md:text-lg lg:text-xl" style={{ fontFamily: "'Barrio', sans-serif" }}>bobbaSkonz productions</span>
           </h1>
@@ -71,7 +71,7 @@ export default function Navigation() {
         {/* Mobile Menu Button */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden text-white p-2"
+          className="md:hidden text-white p-2 pr-6"
           aria-label="Toggle menu"
         >
           <div className="w-6 h-5 flex flex-col justify-between">

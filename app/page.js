@@ -45,16 +45,16 @@ export default function Home() {
               </div>
             </div>
             {/* Keywords - Right (30%) */}
-            <div className="w-full md:w-[30%] h-1/2 md:h-full flex flex-col justify-center items-start pl-8 md:pl-0 space-y-4 md:space-y-6">
-              <h2 className="text-2xl md:text-4xl lg:text-5xl font-light tracking-wider text-white" style={{ fontFamily: "'Barrio', sans-serif" }}>SOUND</h2>
-              <h2 className="text-2xl md:text-4xl lg:text-5xl font-light tracking-wider text-white" style={{ fontFamily: "'Barrio', sans-serif" }}>VISUALS</h2>
-              <h2 className="text-2xl md:text-4xl lg:text-5xl font-light tracking-wider text-white" style={{ fontFamily: "'Barrio', sans-serif" }}>MEDIA</h2>
+            <div className="w-full md:w-[30%] h-1/2 md:h-full flex flex-row md:flex-col justify-center items-center md:items-start gap-4 md:gap-0 md:space-y-6">
+              <h2 className="text-xl md:text-4xl lg:text-5xl font-light tracking-wider text-white" style={{ fontFamily: "'Barrio', sans-serif" }}>SOUND</h2>
+              <h2 className="text-xl md:text-4xl lg:text-5xl font-light tracking-wider text-white" style={{ fontFamily: "'Barrio', sans-serif" }}>VISUALS</h2>
+              <h2 className="text-xl md:text-4xl lg:text-5xl font-light tracking-wider text-white" style={{ fontFamily: "'Barrio', sans-serif" }}>MEDIA</h2>
             </div>
           </div>
         </section>
 
           {/* Sound Section */}
-          <section id="sound" className="relative w-full md:snap-start bg-black flex flex-col justify-start items-center -mt-16 md:mt-2 pb-px md:pb-0 border-t border-b border-white/15">
+          <section id="sound" className="relative w-full md:snap-start bg-black flex flex-col justify-start items-center mt-0 md:mt-2 pb-px md:pb-0 md:border-t border-b border-white/15">
           <div className="absolute bottom-0 left-0 right-0 h-px bg-white/30 md:hidden"></div>
           <div className="w-full px-6 md:px-12 py-8 md:py-12">
             <div className="max-w-6xl mx-auto flex flex-col justify-start space-y-10">
