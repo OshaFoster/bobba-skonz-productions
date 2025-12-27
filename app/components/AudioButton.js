@@ -51,10 +51,10 @@ export default function AudioButton() {
           ></div>
         )}
 
-        {/* Drain animation - from top */}
+        {/* Drain animation - from top down */}
         {isDraining && (
           <div
-            className={`absolute top-0 left-0 right-0 bg-white rounded-full transition-all duration-500 ease-out ${
+            className={`absolute bottom-0 left-0 right-0 bg-white rounded-full transition-all duration-500 ease-out ${
               drainStart ? 'h-0' : 'h-full'
             }`}
           ></div>
