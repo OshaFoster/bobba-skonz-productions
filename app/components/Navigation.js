@@ -60,18 +60,18 @@ export default function Navigation() {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-sm" style={{ paddingTop: 'var(--safe-area-inset-top)' }}>
-      <div className="w-full py-4 flex items-center" style={{ paddingLeft: 'var(--safe-area-inset-left)', paddingRight: 'var(--safe-area-inset-right)' }}>
+      <div className="w-full flex items-center justify-between px-6 py-6 md:px-0 md:py-6" style={{ paddingLeft: 'var(--safe-area-inset-left)', paddingRight: 'var(--safe-area-inset-right)' }}>
         {/* Logo/Brand */}
-        <div className="ml-6 md:ml-[50px]">
-          <h1 className="font-light tracking-wider text-white leading-tight">
-            <span className="text-sm md:text-base" style={{ fontFamily: "'Barrio', sans-serif" }}>bobbaSkonz productions</span>
+        <div className="md:ml-[50px]">
+          <h1 className="font-light tracking-wider text-white">
+            <span className="text-base md:text-lg lg:text-xl" style={{ fontFamily: "'Barrio', sans-serif" }}>bobbaSkonz productions</span>
           </h1>
         </div>
 
         {/* Mobile Menu Button */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden text-white p-2 ml-auto mr-2"
+          className="md:hidden text-white p-2"
           aria-label="Toggle menu"
         >
           <div className="w-6 h-5 flex flex-col justify-between">
@@ -82,7 +82,7 @@ export default function Navigation() {
         </button>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex gap-8 ml-auto mr-[50px]">
+        <div className="hidden md:flex gap-8 mr-[50px]">
           {NAV_SECTIONS.map((section) => (
             <button
               key={section}
