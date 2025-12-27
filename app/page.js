@@ -2,6 +2,7 @@ import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import GalleryMasonry from './components/GalleryMasonry';
 import AudioButton from './components/AudioButton';
+import FadeInSection from './components/FadeInSection';
 
 const galleryImages = [
   { src: '/images/gallery2.webp', alt: 'Gallery 2' },
@@ -58,7 +59,7 @@ export default function Home() {
           <section id="sound" className="relative w-full md:snap-start bg-black flex flex-col justify-start items-center mt-0 md:mt-2 pb-px md:pb-0 md:border-t border-b border-white/15">
           <div className="absolute bottom-0 left-0 right-0 h-px bg-white/30 md:hidden"></div>
           <div className="w-full px-6 md:px-12 py-8 md:py-12">
-            <div className="max-w-6xl mx-auto flex flex-col justify-start space-y-10">
+            <FadeInSection className="max-w-6xl mx-auto flex flex-col justify-start space-y-10">
               {/* Section Title */}
               <h2 className="text-3xl md:text-5xl font-light tracking-wider text-white text-center mb-8 md:mb-10" style={{ fontFamily: "'Barrio', sans-serif" }}>
                 SOUND
@@ -166,13 +167,13 @@ export default function Home() {
                   </a>
                 </div>
               </div>
-            </div>
+            </FadeInSection>
           </div>
         </section>
 
           {/* Visuals Section */}
           <section id="visuals" className="w-full md:snap-start bg-black border-b border-white/15">
-          <div className="w-full overflow-y-auto">
+          <FadeInSection className="w-full overflow-y-auto">
             {/* Header Image - Desktop Only */}
             <div className="hidden md:block w-full px-12 pt-12">
               <div className="max-w-md mx-auto overflow-hidden">
@@ -267,14 +268,14 @@ export default function Home() {
                 ))}
               </div>
             </div>
-          </div>
+          </FadeInSection>
         </section>
 
           {/* Media Section */}
           <section id="media" className="relative w-full md:snap-start bg-black flex flex-col justify-start items-center pb-px md:pb-0">
           <div className="absolute bottom-0 left-0 right-0 h-px bg-white/30 md:hidden"></div>
           <div className="w-full px-6 md:px-12 py-12 md:py-16">
-            <div className="space-y-8 max-w-3xl mx-auto">
+            <FadeInSection className="space-y-8 max-w-3xl mx-auto">
               <h2 className="text-3xl md:text-5xl font-light tracking-wider text-white text-center mb-8 md:mb-10" style={{ fontFamily: "'Barrio', sans-serif" }}>
                 MEDIA
               </h2>
@@ -319,7 +320,7 @@ export default function Home() {
                   I've also collaborated in the studio with Redfoot Music, releasing a professionally produced track.
                 </p>
               </div>
-            </div>
+            </FadeInSection>
           </div>
         </section>
 
