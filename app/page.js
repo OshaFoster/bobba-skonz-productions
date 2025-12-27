@@ -79,13 +79,17 @@ export default function Home() {
                     <h3 className="text-xl md:text-2xl font-light tracking-wider text-white mb-3" style={{ fontFamily: "'Barrio', sans-serif" }}>
                       IT KEEPS GETTING BETTER
                     </h3>
-                    <p className="text-xs text-gray-400 tracking-wide mb-4">
-                      ALBUM SAMPLE
-                    </p>
                   </div>
                   <div className="mb-4 flex items-center gap-4">
                     <AudioButton />
-                    <p className="text-sm md:text-base text-gray-300 tracking-wide">WARPZ</p>
+                    <div>
+                      <h4 className="text-xl md:text-2xl font-light tracking-wider text-white" style={{ fontFamily: "'Barrio', sans-serif" }}>
+                        WARPZ
+                      </h4>
+                      <p className="text-xs text-gray-400 tracking-wide">
+                        SAMPLE
+                      </p>
+                    </div>
                   </div>
                   <div className="space-y-3 text-sm md:text-base leading-relaxed">
                     <p>
