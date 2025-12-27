@@ -80,17 +80,6 @@ export default function Home() {
                       IT KEEPS GETTING BETTER
                     </h3>
                   </div>
-                  <div className="mb-4 flex items-center gap-4">
-                    <AudioButton />
-                    <div>
-                      <h4 className="text-xl md:text-2xl font-light tracking-wider text-white" style={{ fontFamily: "'Barrio', sans-serif" }}>
-                        WARPZ
-                      </h4>
-                      <p className="text-xs text-gray-400 tracking-wide">
-                        SAMPLE
-                      </p>
-                    </div>
-                  </div>
                   <div className="space-y-3 text-sm md:text-base leading-relaxed">
                     <p>
                       It Keeps Getting Better is a fully self-produced album that blurs reality and imagination—finding peace in the midst of chaos. Built at the intersection of hip-hop, psychedelics, and lived experience, the project explores identity, perception, and the social constructs we're shaped by—questioning everything beneath the surface.
@@ -101,6 +90,17 @@ export default function Home() {
                     <p>
                       Layered throughout are metaphors and references to the movies, cartoons, and artists that shaped me—threads of nostalgia woven into the narrative. The album evolves as it unfolds, with every song adding a new layer to the story. My intention was to create something timeless—an album that deepens all the way through.
                     </p>
+                  </div>
+                  <div className="mt-6 flex items-center gap-4">
+                    <AudioButton />
+                    <div>
+                      <h4 className="text-xl md:text-2xl font-light tracking-wider text-white" style={{ fontFamily: "'Barrio', sans-serif" }}>
+                        WARPZ
+                      </h4>
+                      <p className="text-xs text-gray-400 tracking-wide">
+                        SAMPLE
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
