@@ -35,7 +35,7 @@ export default function AudioButton() {
   };
 
   return (
-    <div className="mb-4 flex justify-start">
+    <>
       <button
         onClick={handleClick}
         className="group relative w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 border-2 border-white/50 flex items-center justify-center overflow-hidden transition-all"
@@ -76,6 +76,6 @@ export default function AudioButton() {
 
       {/* Hidden audio element */}
       <audio ref={audioRef} src="/audio/LANDR-warps mixed2-Balanced-Medium-REV_V2.m4a" />
-    </div>
+    </>
   );
 }

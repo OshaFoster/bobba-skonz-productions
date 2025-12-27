@@ -80,10 +80,13 @@ export default function Home() {
                       IT KEEPS GETTING BETTER
                     </h3>
                     <p className="text-xs text-gray-400 tracking-wide mb-4">
-                      ALBUM
+                      ALBUM SAMPLE
                     </p>
                   </div>
-                  <AudioButton />
+                  <div className="mb-4 flex items-center gap-4">
+                    <AudioButton />
+                    <p className="text-sm md:text-base text-gray-300 tracking-wide">WARPZ</p>
+                  </div>
                   <div className="space-y-3 text-sm md:text-base leading-relaxed">
                     <p>
                       It Keeps Getting Better is a fully self-produced album that blurs reality and imagination—finding peace in the midst of chaos. Built at the intersection of hip-hop, psychedelics, and lived experience, the project explores identity, perception, and the social constructs we're shaped by—questioning everything beneath the surface.
