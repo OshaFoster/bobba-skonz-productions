@@ -97,7 +97,7 @@ export default function Home() {
                       Across the album, I document life as a starving artist: hustling, living out of my van, traveling, and betting everything on an art form I've been sharpening since I was 14. Each track captures the tension between where I am and where I know I'm headed.
                     </p>
                     <p>
-                      Layered throughout are metaphors and references to the movies, cartoons, and artists that shaped me—threads of nostalgia woven into the narrative. The album evolves as it unfolds, with every song adding a new layer to the story. My intention was to create something timeless—an album that deepens all the way through.
+                      Layered throughout are metaphors and references to the movies, cartoons, and artists that shaped me—nostalgia. The album evolves as it unfolds, with every song adding a new layer to the story. My intention was to create something timeless—an album that deepens all the way through.
                     </p>
                   </div>
                   <div className="mt-6">
@@ -208,7 +208,7 @@ export default function Home() {
                       APPROACH
                     </h4>
                     <p>
-                      I approach photography and videography the same way I approach music: as art, presence, and storytelling. I focus on real moments as they unfold, prioritizing emotion, movement, and energy over staged perfection.
+                      I approach photography and videography the same way I approach music: as art, presence, and storytelling. I focus on real moments as they unfold, prioritizing emotion, movement, and energy.
                     </p>
                     <p>
                       My work leans toward vibrant, candid imagery—full of life, color, and feeling. Whether I'm photographing portraits, families, nature, or live events, the goal is always the same: to capture the moment honestly and artistically.
@@ -317,7 +317,7 @@ export default function Home() {
                   <li>• Kosmik!</li>
                 </ul>
                 <p className="text-sm md:text-base leading-relaxed pt-3">
-                  I've also collaborated in the studio with Redfoot Music, releasing a professionally produced track.
+                  I have a Redfoot Music produced track coming soon!
                 </p>
               </div>
             </FadeInSection>
