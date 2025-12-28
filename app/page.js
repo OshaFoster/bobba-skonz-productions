@@ -35,19 +35,19 @@ export default function Home() {
         <section id="home" className="relative w-full h-full md:snap-start flex justify-center items-center pb-px md:pb-0">
           <div className="absolute bottom-0 left-0 right-0 h-px bg-white/30 md:hidden z-10"></div>
           {/* Hero Section - Logo and Text */}
-          <div className="w-full h-full bg-black flex flex-col md:flex-row items-center">
-            {/* Logo - Left (70%) */}
-            <div className="w-full md:w-[70%] h-1/2 md:h-full flex items-center justify-center">
-              <div className="max-w-md md:max-w-xl lg:max-w-2xl w-full aspect-square overflow-hidden flex items-center justify-center">
+          <div className="w-full h-full bg-black flex flex-col md:flex-row items-center justify-center gap-8 md:gap-0">
+            {/* Logo - Mobile: centered, Desktop: left (70%) */}
+            <div className="w-full md:w-[70%] md:h-full flex items-center justify-center md:-mt-16">
+              <div className="max-w-xs md:max-w-xl lg:max-w-2xl w-full aspect-square overflow-hidden flex items-center justify-center">
                 <img
-                  src="/images/logo.jpeg"
+                  src="/images/logo.png"
                   alt="Bobba Skonz Productions Logo"
                   className="w-full h-full object-cover mix-blend-screen scale-110"
                 />
               </div>
             </div>
-            {/* Keywords - Right (30%) */}
-            <div className="w-full md:w-[30%] h-1/2 md:h-full flex flex-row md:flex-col justify-center items-center md:items-start gap-4 md:gap-0 md:space-y-6 pb-12 md:pb-0">
+            {/* Keywords - Mobile: horizontal underneath, Desktop: vertical on right (30%) */}
+            <div className="w-full md:w-[30%] md:h-full flex flex-row md:flex-col justify-center items-center md:items-start gap-6 md:gap-0 md:space-y-6">
               <h2 className="text-xl md:text-4xl lg:text-5xl font-light tracking-wider text-white text-center md:text-left animate-[fadeInUp_0.8s_ease-out_0.3s_both]" style={{ fontFamily: "'Barrio', sans-serif" }}>SOUND</h2>
               <h2 className="text-xl md:text-4xl lg:text-5xl font-light tracking-wider text-white text-center md:text-left animate-[fadeInUp_0.8s_ease-out_0.6s_both]" style={{ fontFamily: "'Barrio', sans-serif" }}>VISUALS</h2>
               <h2 className="text-xl md:text-4xl lg:text-5xl font-light tracking-wider text-white text-center md:text-left animate-[fadeInUp_0.8s_ease-out_0.9s_both]" style={{ fontFamily: "'Barrio', sans-serif" }}>MEDIA</h2>
