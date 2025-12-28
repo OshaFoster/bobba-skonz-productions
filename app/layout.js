@@ -12,8 +12,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Portfolio",
-  description: "Music Producer & Photographer Portfolio",
+  title: "Bobba Skonz Productions",
+  description: "Sound, Visuals, Media - Music Production, Photography & Videography",
 };
 
 export const viewport = {
