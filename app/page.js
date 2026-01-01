@@ -86,12 +86,12 @@ export default function Home() {
                 <div className="space-y-3 text-gray-300">
                   <div>
                     <h3 className="text-xl md:text-2xl font-light tracking-wider text-white mb-3" style={{ fontFamily: "'Barrio', sans-serif" }}>
-                      IT KEEPS GETTING BETTER
+                      IT KEEPZ GETTING BETTER
                     </h3>
                   </div>
                   <div className="space-y-3 text-sm md:text-base leading-relaxed">
                     <p>
-                      It Keeps Getting Better is a fully self-produced album that blurs reality and imagination—finding peace in the midst of chaos. Built at the intersection of hip-hop, psychedelics, and lived experience, the project explores identity, perception, and the social constructs we're shaped by—questioning everything beneath the surface.
+                      It Keepz Getting Better is a fully self-produced album that blurs reality and imagination—finding peace in the midst of chaos. Built at the intersection of hip-hop, psychedelics, and lived experience, the project explores identity, perception, and the social constructs we're shaped by—questioning everything beneath the surface.
                     </p>
                     <p>
                       Across the album, I document life as a starving artist: hustling, living out of my van, traveling, and betting everything on an art form I've been sharpening since I was 14. Each track captures the tension between where I am and where I know I'm headed.
